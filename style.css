@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.toolbox-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100vw;
+    height: 6rem;
+    background-color: black;
+}
+.priority-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: aliceblue;
+    height: 3rem;
+    width: 18vw;
+}
+.color:hover, .priority-color:hover{
+    cursor: pointer;
+}
+.color{
+    height: 2rem;
+    width: 3vw;
+}
+.button-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: aliceblue;
+    height: 3rem;
+    width: 8vw;
+}
+.add-btn{
+    font-size: 2.5rem;
+}
+.remove-btn{
+    font-size: 1.75rem;
+}
+.add-btn:hover, .remove-btn:hover{
+    cursor: pointer;
+}
+.red{
+    background-color: red;
+}
+.lightgreen{
+    background-color: lightgreen;
+}
+.lightpink{
+    background-color: lightpink;
+}
+.lightblue{
+    background-color: lightblue;
+}
+.modal-container{
+    position: fixed;
+    top: 15%;
+    left: 35%;
+    background-color: aliceblue;
+    display: none;
+    height: 40vh;
+    width: 30vw;
+    border: 1px solid black;
+}
+.text-area{
+    height: 100%;
+    width: 75%;
+    resize: none;
+    font-size: 1.75rem;
+    padding: 1rem;
+    border-right: solid;
+}
+.color-container{
+    display: flex;
+    height: 100%;
+    width: 25%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.priority-color{
+    height: 2.5rem;
+    width: 4.5rem;
+}
+.ticket-container{
+    height: 12rem;
+    width: 12rem;
+    background-color: rgba(80, 255, 252, 0.267);
+}
+.main-content{
+    margin: 2rem 0rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-evenly;
+}
+.ticket-color{
+    height: 1.5rem;
+    width: 100%;
+    /* background-color: red; */
+}
+.ticket-id{
+    height: 2rem;
+    padding-left: 0.5rem;
+    font-weight: bold;
+}
+.task-area{
+    height: 6.5rem;
+    padding: 5px;
+    font-size: 1.5rem;
+}
+.selected{
+    border: 5px solid rgb(255, 174, 0);
+}

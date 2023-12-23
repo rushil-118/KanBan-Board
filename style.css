@@ -1,4 +1,4 @@
-*{
+/* *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -54,7 +54,111 @@
 }
 .lightblue{
     background-color: lightblue;
-}
+} */
+
+/* Reset and global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Toolbox container styles */
+  .toolbox-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: black;
+    padding: 0.5rem;
+  }
+  
+  /* Priority container styles */
+  .priority-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: aliceblue;
+    height: 3rem;
+    width: 100%;
+    max-width: 18rem;
+    padding: 0.5rem;
+  }
+  
+  /* Color and priority color styles */
+  .color, .priority-color {
+    height: 2rem;
+    width: 3rem;
+    border: 2px solid rgba(0, 0, 0, 0.452);
+    box-shadow: 1px 1px 1px rgb(83, 81, 81);
+    cursor: pointer;
+  }
+  
+  .color:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+  }
+  
+  /* Button container styles */
+  .button-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: aliceblue;
+    height: 3rem;
+    width: 100%;
+    max-width: 8rem;
+    padding: 0.5rem;
+  }
+  
+  /* Add and remove button styles */
+  .add-btn, .remove-btn {
+    font-size: 2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .add-btn:hover, .remove-btn:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Specific colors */
+  .red {
+    background-color: red;
+  }
+  
+  .lightgreen {
+    background-color: lightgreen;
+  }
+  
+  .lightpink {
+    background-color: lightpink;
+  }
+  
+  .lightblue {
+    background-color: lightblue;
+  }
+  
+  /* Responsive media query for smaller screens */
+  @media screen and (max-width: 768px) {
+    .toolbox-container {
+      flex-direction: column;
+      gap: 1em;
+    }
+    
+    .priority-container{
+      max-width: 100%;
+      width: 100%;
+    }
+    .button-container{
+        max-width: 100%;
+        width: 35%;
+    }
+  }
+  
+
+
+
 .modal-container{
     position: fixed;
     top: 15%;
@@ -86,9 +190,12 @@
     width: 4.5rem;
 }
 .ticket-container{
-    height: 12rem;
-    width: 12rem;
-    background-color: rgba(80, 255, 252, 0.267);
+    position: relative;
+    height: 15rem;
+    width: 15rem;
+    border: 2px solid rgb(17, 28, 34);
+    box-shadow: 2px 2px 2px rgb(164, 160, 160);
+    background-color: rgba(218, 226, 106, 0.267);
 }
 .main-content{
     margin: 2rem 0rem;
@@ -96,22 +203,41 @@
     flex-wrap: wrap;
     gap: 2rem;
     justify-content: space-evenly;
+    text-wrap: wrap;
 }
 .ticket-color{
     height: 1.5rem;
+    border-bottom: 3px solid black;
     width: 100%;
     /* background-color: red; */
 }
 .ticket-id{
-    height: 2rem;
-    padding-left: 0.5rem;
+    height: 1.5rem;
+    padding: 1px 0 0 5px;
+    color: rgba(255, 255, 255, 0.669);
     font-weight: bold;
+    background-color: rgb(128, 115, 110);
+    border-bottom: 3px solid black;
 }
 .task-area{
-    height: 6.5rem;
+    height: 9.5rem;
     padding: 5px;
     font-size: 1.5rem;
+    text-wrap: wrap;
+    overflow: hidden;
 }
 .selected{
-    border: 5px solid rgb(255, 174, 0);
+    transform: scale(1.1);
+    border: 5px solid rgb(255, 240, 33);
+    box-shadow: 2px 2px 2px 2px black;
+}
+.icon{
+    position: absolute;
+    font-size: large;
+    padding: 0 0 0 0.5em;
+    right: 5%;
+}
+
+.unlock-icon{
+    display: none;
 }

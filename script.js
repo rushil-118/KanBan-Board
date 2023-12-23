@@ -50,7 +50,7 @@ Btns.addEventListener('click', function (e) {
             }
             for (let i = 0; i < tickets.length; i++) {
                 let ticket = tickets[i].querySelector('.ticket-color');
-                if (ticket.style.background != color) {
+                if (!ticket.classList.contains(color)) {
                     tickets[i].style.display = 'none';
                 }
             }
